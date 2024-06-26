@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS jobs (
+    id SERIAL PRIMARY KEY,
+    recruiter_id INT REFERENCES recruiters(id) ON DELETE CASCADE,
+    job_title VARCHAR(100) NOT NULL,
+    job_description TEXT NOT NULL,
+    location VARCHAR(100),
+    job_type VARCHAR(50),
+    salary DECIMAL(10, 2),
+    posted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

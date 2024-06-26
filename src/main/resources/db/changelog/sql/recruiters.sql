@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS recruiters (
+    id SERIAL PRIMARY KEY,
+    user_id INT REFERENCES users(id) ON DELETE CASCADE,
+    company_name VARCHAR(100) NOT NULL,
+    company_logo VARCHAR(255),
+    contact_number VARCHAR(15),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

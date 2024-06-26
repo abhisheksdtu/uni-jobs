@@ -8,6 +8,11 @@
     <changeSet id="1" author="abhishek">
         <!-- your changes go here -->
         <sqlFile path="db/changelog/sql/users.sql"></sqlFile>
+        <sqlFile path="db/changelog/sql/students.sql"></sqlFile>
+        <sqlFile path="db/changelog/sql/recruiters.sql"></sqlFile>
+        <sqlFile path="db/changelog/sql/admins.sql"></sqlFile>
+        <sqlFile path="db/changelog/sql/jobs.sql"></sqlFile>
+        <sqlFile path="db/changelog/sql/applications.sql"></sqlFile>
     </changeSet>
 
 </databaseChangeLog>
