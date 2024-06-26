@@ -1,6 +1,5 @@
 package com.project.unijobs.entity;
 
-import com.project.unijobs.enums.UserRole;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,27 +11,23 @@ import javax.persistence.*;
 @Data
 @Builder
 @NoArgsConstructor
-@Table(name = "users")
 @AllArgsConstructor
-public class User {
+@Table(name = "users")
+public class User extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false, unique = true)
-    Integer id;
+    private Integer id;
 
-    @Column(name = "name")
-    String name;
+    @Column(name = "username", unique = true, nullable = false)
+    private String username;
 
-    @Column(name = "username")
-    String username;
+    @Column(name = "password", nullable = false)
+    private String password;
 
-    @Column(name = "password")
-    String password;
+    @Column(name = "email", unique = true, nullable = false)
+    private String email;
 
-    @Column(name = "email")
-    String email;
-
-    @Enumerated(EnumType.STRING)
-    @Column(name = "role")
-    UserRole role;
+    @Column(name = "role_id", nullable = false)
+    private Integer roleId;
 }
