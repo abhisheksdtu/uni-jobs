@@ -10,12 +10,12 @@ import java.time.Instant;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserDTO {
+public class ApplicationDTO {
     private Integer id;
-    private String username;
-    private String password;
-    private String email;
-    private Integer roleId;
+    private Integer studentId;
+    private Integer jobId;
+    private String applicationStatus;
+    private Instant appliedAt;
     private Instant createdAt;
     private Instant updatedAt;
 }
